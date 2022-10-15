@@ -14,7 +14,7 @@ const add_user = async (req, res) => {
         if (password != repassword) return res.json({ status: false, message: "password and reentered password didnot match" })
 
         const findUser = await userModel.findOne({ email: email })
-        if (!findUser) return res.json({ status: false, message: "email already registered" })
+        if (findUser) return res.json({ status: false, message: "email already registered" })
 
         let saltRounds = await bcrypt.genSalt(10)
         let encryptedPassword = await bcrypt.hash(password, saltRounds)
