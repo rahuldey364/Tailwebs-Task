@@ -1,13 +1,49 @@
-const homeRoute = (req,res) => {
-    res.render("index.ejs")
+const axios = require("axios")
+
+const log_in = (req, res) => {
+    res.render("login.ejs")
+}
+const sign_up = (req, res) => {
+    res.render("signup.ejs")
 }
 
-const add_student = (req,res) => {
+const homeRoute = async (req, res) => {
+    try {
+        const token = req.cookies.token
+        // console.log(token)
+        const headers = {
+            'authentication': token
+        }
+        const response = await axios.get("http://localhost:8080/all-students",{
+            headers:headers
+        })
+        // console.log(response.data)
+        res.render("index.ejs",{students:response.data})
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const add_student = (req, res) => {
     res.render("add_student.ejs")
 }
 
-const update_student = (req,res) => {
-    res.render("update_student.ejs")
+const update_student = async (req, res) => {
+    try {
+        const token = req.cookies.token
+        // console.log(token)
+        const headers = {
+            'authentication': token
+        }
+        const response = await axios.get("http://localhost:8080/all-students",{
+            headers:headers,
+            params:{id:req.query.id}
+        })
+        console.log(response.data)
+        res.render("update_student.ejs",{students:response.data})
+    } catch (error) {
+        console.log(error)
+    }
 }
 
-module.exports = {homeRoute,add_student,update_student}
+module.exports = { log_in,homeRoute, add_student, update_student , sign_up }

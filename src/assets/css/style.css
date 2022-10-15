@@ -65,7 +65,7 @@ a {
 }
 
 #header nav{
-    background-color: #06d6a0;
+    background-color: #5965f1;
     padding: 1em 0;
     width: 100%;
 }
@@ -104,7 +104,7 @@ table{
 }
 
 .table tr:hover{
-    background-color:#06d6a0 ;
+    background-color:#6292e0 ;
 }
 
 .table tr:hover td > a{
@@ -146,18 +146,24 @@ table{
     padding: .5em 0;
 }
 
-.new_user{
+.new_student{
     max-width: 786px;
     margin: auto;
 }
 
-#update_user .form-group,
-#add_user .form-group{
+#update_student .form-group,
+#add_student .form-group,
+#login .form-group,
+#signup .form-group{
     margin: .4em 0;
 }
 
 #update_student .form-group input[type="text"],
-#add_student .form-group input[type="text"]{
+#add_student .form-group input[type="text"],
+#login .form-group input[type="password"],
+#login .form-group input[type="text"],
+#signup .form-group input[type="password"],
+#signup .form-group input[type="text"]{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
@@ -168,10 +174,12 @@ table{
 }
 
 #update_student .form-group .btn,
-#add_student .form-group .btn{
+#add_student .form-group .btn,
+#login .form-group .btn,
+#signup .form-group .btn{
     width: 100%;
     padding: .9em 1em;
-    background-color:#16db93; 
+    background-color:#618ee0; 
     border: none;
     font-family: 'PT Sans', sans-serif;
     font-size: 1em;
@@ -181,7 +189,9 @@ table{
 }
 
 #update_student .form-group .btn:hover,
-#add_student .form-group .btn:hover{
+#add_student .form-group .btn:hover,
+#login .form-group .btn:hover,
+#signup .form-group .btn:hover{
     background-color: var(--dark);
     color: var(--border);
 }

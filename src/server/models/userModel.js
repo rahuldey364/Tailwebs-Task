@@ -17,11 +17,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true
-  },
-  students:[{
-    type:mongoose.Schema.Types.ObjectId,
-    ref:"Student"
-  }]
+  }
 }, { timestamps: true })
 
 
