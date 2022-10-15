@@ -20,7 +20,7 @@ $("#update_student").submit(function(event){
     })
 
     const request = {
-        "url" : `http://localhost:8080/update-student/${data.id}`,
+        "url" : `https://student-management-tailwebs.herokuapp.com/update-student/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -35,7 +35,7 @@ if(window.location.pathname == "/user"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url" : `http://localhost:8080/delete-student/${id}`,
+            "url" : `https://student-management-tailwebs.herokuapp.com/delete-student/${id}`,
             "method" : "DELETE"
         }
 

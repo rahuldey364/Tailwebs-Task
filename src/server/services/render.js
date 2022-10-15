@@ -14,7 +14,7 @@ const homeRoute = async (req, res) => {
         const headers = {
             'authentication': token
         }
-        const response = await axios.get("http://localhost:8080/all-students",{
+        const response = await axios.get("https://student-management-tailwebs.herokuapp.com/all-students",{
             headers:headers
         })
         // console.log(response.data)
@@ -35,7 +35,7 @@ const update_student = async (req, res) => {
         const headers = {
             'authentication': token
         }
-        const response = await axios.get("http://localhost:8080/all-students",{
+        const response = await axios.get("https://student-management-tailwebs.herokuapp.com/all-students",{
             headers:headers,
             params:{id:req.query.id}
         })
