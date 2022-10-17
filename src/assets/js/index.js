@@ -1,14 +1,14 @@
-$("#add_student").submit(function(event){
-    alert("data inserted sucessfully")
-})
+// $("#add_student").submit(function(event){
+//     alert("data inserted sucessfully")
+// })
 
-$("#login").submit(function(event){
-    alert("login sucessful")
-})
+// $("#login").submit(function(event){
+//     alert("login sucessful")
+// })
 
-$("#signup").submit(function(event){
-    alert("user creation sucessful")
-})
+// $("#signup").submit(function(event){
+//     alert("user creation sucessful")
+// })
 
 $("#update_student").submit(function(event){
     event.preventDefault()

@@ -71,6 +71,8 @@ a {
 }
 
 #site-main{
+    padding-left: 10em;
+    padding-right: 10em;
     margin-top: 6em;
     font-family: 'Barlow', sans-serif;
 }

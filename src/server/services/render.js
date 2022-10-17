@@ -39,7 +39,7 @@ const update_student = async (req, res) => {
             headers:headers,
             params:{id:req.query.id}
         })
-        console.log(response.data)
+        //console.log(response.data)
         res.render("update_student.ejs",{students:response.data})
     } catch (error) {
         console.log(error)
