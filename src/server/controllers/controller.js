@@ -10,6 +10,8 @@ const add_user = async (req, res) => {
 
         const { name, email, password, repassword } = req.body
 
+        if (!name && !email && !password && !repassword) return res.status(400).send({ status: false, message: "please fill all the fields" })
+
         if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) return res.status(400).send({ status: false, message: "Invalid email" })
         if (password != repassword) return res.json({ status: false, message: "password and reentered password didnot match" })
 
